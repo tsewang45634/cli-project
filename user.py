@@ -86,8 +86,14 @@ def insert_users(con,users):
     cur.executemany(user_add_query, users )
     con.commit()
     print(f"{len(users)} users were imported successfully.")
-
-
+# install git in your machine
+# git -- version
+# create repository in github
+# git config --global user.name "Teswang Bista"
+# git config --global user.email "tenzinbista45634@gmail.com"
+# git add .
+# git commit -m "your commit message"
+# git push origin
 def select_users(con):
     cur = con.cursor()
     users = cur.execute('SELECT * FROM users')
